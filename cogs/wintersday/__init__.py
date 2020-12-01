@@ -184,7 +184,7 @@ class Christmas(commands.Cog):
         await ctx.send(
             _(
                 "You combined the puzzles! In your head a voice whispers: *Well done."
-                " Now use `{prefix}eventbackground 1{num}` to set your new background that"
+                " Now use `{prefix}eventbackground {num}` to set your new background that"
                 " you just acquired...*"
             ).format(prefix=ctx.prefix, num=len(bgs))
         )
