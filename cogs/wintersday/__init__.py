@@ -170,32 +170,23 @@ class Christmas(commands.Cog):
                     " missing?"
                 )
             )
-        bg = random.choice(
-            [
-                "https://i.imgur.com/iLJEGOf.png",
-                "https://i.imgur.com/LDax1ag.png",
-                "https://i.imgur.com/FpWXBev.png",
-            ]
+        bg_num = random.randint(1, 4)
+        bg = f"https://idlerpg.xyz/image/winter2020_{bg_num}.png"
+        bgs = await self.bot.pool.fetchval(
+            'UPDATE profile SET "backgrounds"=array_append("backgrounds", $1), "puzzles"=0 WHERE'
+            ' "user"=$2 RETURNING "backgrounds";',
+            bg,
+            ctx.author.id,
         )
-        async with self.bot.pool.acquire() as conn:
-            bgs = await conn.fetchval(
-                "UPDATE profile SET backgrounds=array_append(backgrounds, $1) WHERE"
-                ' "user"=$2 RETURNING "backgrounds";',
-                bg,
-                ctx.author.id,
-            )
-            await conn.execute(
-                'UPDATE profile SET "puzzles"=0 WHERE "user"=$1;', ctx.author.id
-            )
         await self.bot.cache.update_profile_cols_abs(
             ctx.author.id, backgrounds=bgs, puzzles=0
         )
         await ctx.send(
             _(
                 "You combined the puzzles! In your head a voice whispers: *Well done."
-                " Now use `{prefix}eventbackground 1` to set your new background that"
+                " Now use `{prefix}eventbackground 1{num}` to set your new background that"
                 " you just acquired...*"
-            ).format(prefix=ctx.prefix)
+            ).format(prefix=ctx.prefix, num=len(bgs))
         )
 
 
