@@ -134,7 +134,7 @@ query_endpoint = "http://localhost:7000/search"
 resolve_endpoint = "http://localhost:7000/resolve"
 
 """This is the colour used in most embeds and for everything else. You know that yellow from somewhere ;)"""
-primary_colour = 0xFFBC00
+primary_colour = 0xffbc00
 
 """Our sentry URL to post bugs to."""
 sentry_url = "https://whatever.sentry.url"

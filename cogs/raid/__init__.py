@@ -234,13 +234,13 @@ class Raid(commands.Cog):
                 em = discord.Embed(
                     title="Zerekiel attacked!",
                     description=f"{target} now has {raid[target]['hp']} HP!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             else:
                 em = discord.Embed(
                     title="Zerekiel attacked!",
                     description=f"{target} died!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             em.add_field(
                 name="Theoretical Damage", value=finaldmg + raid[target]["armor"]
@@ -255,7 +255,7 @@ class Raid(commands.Cog):
             dmg_to_take = sum(i["damage"] for i in raid.values())
             self.boss["hp"] -= dmg_to_take
             await asyncio.sleep(4)
-            em = discord.Embed(title="The raid attacked Zerekiel!", colour=0xFF5C00)
+            em = discord.Embed(title="The raid attacked Zerekiel!", colour=0xff5c00)
             em.set_thumbnail(url=f"{self.bot.BASE_URL}/knight.jpg")
             em.add_field(name="Damage", value=dmg_to_take)
             if self.boss["hp"] > 0:
@@ -500,13 +500,13 @@ class Raid(commands.Cog):
                 em = discord.Embed(
                     title="Cthulhu attacked!",
                     description=f"{target} now has {raid[target]['hp']} HP!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             else:
                 em = discord.Embed(
                     title="Cthulhu attacked!",
                     description=f"{target} died!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             em.add_field(
                 name="Theoretical Damage", value=finaldmg + raid[target]["armor"]
@@ -521,7 +521,7 @@ class Raid(commands.Cog):
             dmg_to_take = sum(i["damage"] for i in raid.values())
             boss_hp -= dmg_to_take
             await asyncio.sleep(4)
-            em = discord.Embed(title="The raid attacked Cthulhu!", colour=0xFF5C00)
+            em = discord.Embed(title="The raid attacked Cthulhu!", colour=0xff5c00)
             em.set_thumbnail(url=f"{self.bot.BASE_URL}/knight.jpg")
             em.add_field(name="Damage", value=dmg_to_take)
             if boss_hp > 0:
@@ -620,7 +620,7 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
                         description=(
                             f"{nice_names} were eliminated by a wave of insanity!"
                         ),
-                        colour=0xFDB900,
+                        colour=0xfdb900,
                     ).set_thumbnail(url=f"{self.bot.BASE_URL}/guilt.jpg")
                 )
                 await asyncio.sleep(5)
@@ -631,13 +631,13 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
                 em = discord.Embed(
                     title=f"{attacker} attacked {target}!",
                     description=f"{target} now has {hp} HP!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             else:
                 em = discord.Embed(
                     title=f"{attacker} attacked {target}!",
                     description=f"{target} died!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             em.add_field(name="Damage", value=dmg)
             em.set_author(name=f"{target}", icon_url=target.avatar_url)
@@ -940,13 +940,13 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
                 em = discord.Embed(
                     title="The Guardian attacks the seekers of the garden!",
                     description=f"{target} now has {raid[target]['hp']} HP!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             else:
                 em = discord.Embed(
                     title="The Guardian attacks the seekers of the garden!",
                     description=f"{target} died!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             em.add_field(name="Theoretical Damage", value=dmg + raid[target]["armor"])
             em.add_field(name="Shield", value=raid[target]["armor"])
@@ -960,7 +960,7 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
             self.boss["hp"] -= dmg_to_take
             await asyncio.sleep(4)
             em = discord.Embed(
-                title="The seekers attacked the Guardian!", colour=0xFF5C00
+                title="The seekers attacked the Guardian!", colour=0xff5c00
             )
             em.set_thumbnail(url=f"{self.bot.BASE_URL}/eden_followers.jpg")
             em.add_field(name="Damage", value=dmg_to_take)
@@ -1123,13 +1123,13 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
                 em = discord.Embed(
                     title=text,
                     description=loss_text,
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             else:
                 em = discord.Embed(
                     title=text,
                     description=win_text,
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             em.set_author(name=str(target), icon_url=target.avatar_url)
             em.set_thumbnail(url=f"{self.bot.BASE_URL}/tet.png")
@@ -1258,13 +1258,13 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
                 em = discord.Embed(
                     title="Hamburger attacked!",
                     description=f"{target} now has {raid[target]['hp']} HP!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             else:
                 em = discord.Embed(
                     title="Hamburger attacked!",
                     description=f"{target} died!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             em.add_field(name="Theoretical Damage", value=dmg + raid[target]["armor"])
             em.add_field(name="Shield", value=raid[target]["armor"])
@@ -1278,7 +1278,7 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
             self.boss["hp"] -= dmg_to_take
             await asyncio.sleep(4)
             em = discord.Embed(
-                title="The raid attacked the hamburger!", colour=0xFF5C00
+                title="The raid attacked the hamburger!", colour=0xff5c00
             )
             em.set_thumbnail(url=f"{self.bot.BASE_URL}/knight.jpg")
             em.add_field(name="Damage", value=dmg_to_take)
@@ -1519,13 +1519,13 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
                         em = discord.Embed(
                             title="Cyberus attacked!",
                             description=f"{target} now has {raid[target]['hp']} HP!",
-                            colour=0xFFB900,
+                            colour=0xffb900,
                         )
                     else:
                         em = discord.Embed(
                             title="Cyberus attacked!",
                             description=f"{target} died!",
-                            colour=0xFFB900,
+                            colour=0xffb900,
                         )
                     em.add_field(
                         name="Theoretical Damage", value=dmg + raid[target]["armor"]
@@ -1549,7 +1549,7 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
                         embed=discord.Embed(
                             title="Cyberus assassinated!",
                             description=f"{target} died.",
-                            colour=0xFFB900,
+                            colour=0xffb900,
                         )
                         .set_author(name=str(target), icon_url=target.avatar_url)
                         .set_thumbnail(url=f"{self.bot.BASE_URL}/cyberus.jpg"),
@@ -1566,13 +1566,13 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
                         em = discord.Embed(
                             title="Cyberus attacked!",
                             description=f"{target} now has {raid[target]['hp']} HP!",
-                            colour=0xFFB900,
+                            colour=0xffb900,
                         )
                     else:
                         em = discord.Embed(
                             title="Cyberus attacked!",
                             description=f"{target} died!",
-                            colour=0xFFB900,
+                            colour=0xffb900,
                         )
                     em.add_field(
                         name="Theoretical Damage", value=dmg + raid[target]["armor"]
@@ -1603,7 +1603,7 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
                 text = f"{text}No skill selected!"
             self.boss["hp"] -= dmg_to_take
             await asyncio.sleep(4)
-            em = discord.Embed(title="The raid attacked Cyberus!", colour=0xFF5C00)
+            em = discord.Embed(title="The raid attacked Cyberus!", colour=0xff5c00)
             em.set_thumbnail(url=f"{self.bot.BASE_URL}/knight.jpg")
             em.add_field(name="Damage", value=dmg_to_take)
             if self.boss["hp"] > 0:
@@ -1812,7 +1812,7 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
             raid[target]["hp"] -= dmg
             raid_dmg = sum(i["damage"] for i in raid.values())
             self.boss["hp"] -= raid_dmg
-            em = discord.Embed(title="Asmodeus Raid", colour=0xFFB900)
+            em = discord.Embed(title="Asmodeus Raid", colour=0xffb900)
             if (hp := raid[target]["hp"]) > 0:
                 em.add_field(name="Attack Target", value=f"{target} ({hp} HP)")
             else:
@@ -1954,13 +1954,13 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
                 em = discord.Embed(
                     title="Atheistus attacked!",
                     description=f"{target} now has {raid[target]['hp']} HP!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             else:
                 em = discord.Embed(
                     title="Atheistus attacked!",
                     description=f"{target} died!",
-                    colour=0xFFB900,
+                    colour=0xffb900,
                 )
             em.add_field(name="Theoretical Damage", value=dmg + raid[target]["armor"])
             em.add_field(name="Shield", value=raid[target]["armor"])
@@ -1973,7 +1973,7 @@ Quick and ugly: <https://discord.com/oauth2/authorize?client_id=4539639655219855
             dmg_to_take = sum(i["damage"] for i in raid.values())
             self.boss["hp"] -= dmg_to_take
             await asyncio.sleep(4)
-            em = discord.Embed(title="The raid attacked Atheistus!", colour=0xFF5C00)
+            em = discord.Embed(title="The raid attacked Atheistus!", colour=0xff5c00)
             em.set_thumbnail(url=f"{self.bot.BASE_URL}/knight.jpg")
             em.add_field(name="Damage", value=dmg_to_take)
             if self.boss["hp"] > 0:

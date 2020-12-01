@@ -42,7 +42,7 @@ class CogMenu(menus.Menu):
         self.title = kwargs.pop("title")
         self.description = kwargs.pop("description")
         self.bot = kwargs.pop("bot")
-        self.color = kwargs.pop("color", 0xCB735C)
+        self.color = kwargs.pop("color", 0xcb735c)
         self.footer = kwargs.pop("footer")
         self.per_page = kwargs.pop("per_page", 5)
         self.page = 1
@@ -104,7 +104,7 @@ class SubcommandMenu(menus.Menu):
         self.title = kwargs.pop("title")
         self.description = kwargs.pop("description")
         self.bot = kwargs.pop("bot")
-        self.color = kwargs.pop("color", 0xCB735C)
+        self.color = kwargs.pop("color", 0xcb735c)
         self.per_page = kwargs.pop("per_page", 5)
         self.page = 1
         self.group_emoji = "💠"
@@ -287,7 +287,7 @@ class Help(commands.Cog):
             inv = await ctx.channel.create_invite()
         except discord.Forbidden:
             return await ctx.send(_("Error when creating Invite."))
-        em = discord.Embed(title="Help Request", colour=0xFF0000)
+        em = discord.Embed(title="Help Request", colour=0xff0000)
         em.add_field(name="Requested by", value=f"{ctx.author}")
         em.add_field(name="Requested in server", value=f"{ctx.guild.name}")
         em.add_field(name="Requested in channel", value=f"#{ctx.channel}")
@@ -342,7 +342,7 @@ class Help(commands.Cog):
             lambda f: f["name"] == "Content", message["embeds"][0]["fields"]
         )["value"]
 
-        em = discord.Embed(title="Help Request", colour=0xFF0000)
+        em = discord.Embed(title="Help Request", colour=0xff0000)
         em.add_field(name="Requested by", value=f"{ctx.author}")
         em.add_field(name="Requested in server", value=f"{ctx.guild.name}")
         em.add_field(name="Requested in channel", value=f"#{ctx.channel}")
