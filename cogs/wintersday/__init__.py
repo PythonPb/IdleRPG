@@ -141,7 +141,7 @@ class Christmas(commands.Cog):
                 )
                 reward_text = f"{reward_text}\n- ${reward['money']}"
             if today.day == 24:
-                bg_num = random.randint(1, 4)
+                bg_num = random.randint(1, 7)
                 bgs = await conn.fetchval(
                     'UPDATE profile SET "backgrounds"=array_append("backgrounds", $1)'
                     ' WHERE "user"=$2 RETURNING "backgrounds";',
@@ -170,7 +170,7 @@ class Christmas(commands.Cog):
                     " missing?"
                 )
             )
-        bg_num = random.randint(1, 4)
+        bg_num = random.randint(1, 7)
         bg = f"https://idlerpg.xyz/image/winter2020_{bg_num}.png"
         bgs = await self.bot.pool.fetchval(
             'UPDATE profile SET "backgrounds"=array_append("backgrounds", $1), "puzzles"=0 WHERE'
